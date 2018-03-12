@@ -7,3 +7,6 @@ require('classes/Bootstrap.php');
 
 $bootstrap = new Bootstrap($_GET);
 $controller = $bootstrap->createController();
+if($controller){
+    $controller->executeAction();
+}
