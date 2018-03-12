@@ -1,0 +1,27 @@
+<html>
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">firstName</th>
+        <th scope="col">lastName</th>
+        <th scope="col">dateOfBirth</th>
+        <th scope="col">active</th>
+        <th scope="col">room</th>
+        <th scope="col">position</th>
+      </tr>
+      <tr *ngFor="let employee of employees; let i = index">
+        <td (click) = "test()">{{employee.id}}</td>
+        <td>{{employee.firstName | addText: 'tekst z pipe'}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.dateOfBirth | date:"dd/MM/yyyy"}}</td>
+        <td>{{employee.active}}</td>
+        <td>{{employee.details.room}}</td>
+        <td>{{employee.details.position}}</td>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+</html>
